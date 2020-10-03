@@ -1,0 +1,15 @@
+$enable-shadows: true;
+$primary: rgb(0, 21, 255);
+
+// $navbar-dark-color: yellow;
+
+// $navbar-light-color: $primary;
+// $black: $primary;
+
+$body-color: #333;
+$body-bg: #dadada;
+
+//When a button was disabled it wasn't obvious enough
+$btn-disabled-opacity: 0.4;
+
+@import "../scss/bootstrap.scss";
