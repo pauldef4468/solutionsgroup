@@ -12,9 +12,13 @@ export default function Layout(props) {
   return (
     <>
       <Head>
-        <title>Ordit</title>
+        <title>The Solutions Group</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+          rel="stylesheet"
+        ></link>
         <script
           src="https://kit.fontawesome.com/94a6e7c62b.js"
           crossOrigin="anonymous"

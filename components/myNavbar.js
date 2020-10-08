@@ -16,16 +16,32 @@ function MyNavbar({ activeLink }) {
   }
   return (
     <div>
-      <Navbar className="my-navbar" variant="dark" expand="md">
+      <Navbar className="playfair" bg="light" variant="light" expand="md">
         {/* <Navbar className="bg-success" bg="light" variant="light" expand="md"> */}
-        <Navbar.Brand href="#">Ordit</Navbar.Brand>
+        <Link href="/">
+          <Navbar.Brand href="/">
+            <img className="logo" src="/main-logo-2.png" alt="logo"></img>
+            The Solutions Group
+          </Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Link href="/" passHref>
-              <Nav.Link active={isActive("home")}>Home</Nav.Link>
+            <Link href="/about" passHref>
+              <Nav.Link active={isActive("about")}>About Us</Nav.Link>
             </Link>
-            {/* {isActive()} */}
+            <Link href="/services" passHref>
+              <Nav.Link active={isActive("services")}>Services</Nav.Link>
+            </Link>
+            <Link href="/contact" passHref>
+              <Nav.Link active={isActive("contact")}>Contact Us</Nav.Link>
+            </Link>
+            <Link href="/faq" passHref>
+              <Nav.Link active={isActive("faq")}>FAQ</Nav.Link>
+            </Link>
+            <Link href="/gallery" passHref>
+              <Nav.Link active={isActive("gallery")}>Gallery</Nav.Link>
+            </Link>
 
             {!_.isEmpty(user) ? (
               <>
@@ -60,10 +76,14 @@ function MyNavbar({ activeLink }) {
             {_.isEmpty(user) ? (
               <>
                 <Link href="/register" passHref>
-                  <Nav.Link active={isActive("register")}>Sign Up</Nav.Link>
+                  <Nav.Link disabled active={isActive("register")}>
+                    Sign Up
+                  </Nav.Link>
                 </Link>
                 <Link href="/login" passHref>
-                  <Nav.Link active={isActive("login")}>Login</Nav.Link>
+                  <Nav.Link disabled active={isActive("login")}>
+                    Login
+                  </Nav.Link>
                 </Link>
                 {/* <Link href="/forgotpw" passHref>
                   <Nav.Link active={isActive("forgotpw")}>

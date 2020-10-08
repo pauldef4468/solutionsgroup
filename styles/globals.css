@@ -8,5 +8,13 @@
 }
 
 .my-navbar {
-  background-color: rgb(47, 65, 255);
+  background-color: rgb(98, 188, 72);
+}
+
+.playfair {
+  font-family: "Playfair Display", serif;
+}
+
+.logo {
+  width: 60px;
 }
