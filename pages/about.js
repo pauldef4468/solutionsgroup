@@ -45,7 +45,7 @@ function About() {
         </div>
       </div>
       <Container fluid="md" className="mt-4">
-        <h5 className={styles.h5}>TSG: The one-stop shop</h5>
+        <h5 className={styles.h5}>TSG - The one-stop shop</h5>
         <p>
           We are a licensed general contractor that strives to be your one-stop
           shop for all your construction/renovation needs. Our services include
