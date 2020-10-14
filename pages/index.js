@@ -30,7 +30,7 @@ export default function Home({ ests }) {
           {/* <Col className={styles.padCol}>Left Side</Col> */}
           <Col className={`${styles.col} col-12 col-sm-6 col-lg-4 `}>
             <img
-              src="/images/home-1-290.jpg"
+              src="/images/crawl-290x193.jpeg"
               alt="Crawlspaces"
               className={styles.image}
             />
@@ -42,7 +42,7 @@ export default function Home({ ests }) {
           </Col>
           <Col className={`${styles.col} col-12 col-sm-6 col-lg-4`}>
             <img
-              src="/images/home-2-290.jpg"
+              src="/images/kitchen-290x193.jpeg"
               alt="Interiors"
               className={styles.image}
             />
@@ -51,7 +51,7 @@ export default function Home({ ests }) {
           </Col>
           <Col className={`${styles.col} col-12 col-sm-6 col-lg-4`}>
             <img
-              src="/images/home-3-290.jpg"
+              src="/images/deck-290x193.jpg"
               alt="Crawlspaces"
               className={styles.image}
             />
