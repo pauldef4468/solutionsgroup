@@ -4,6 +4,7 @@ import { Container, CardDeck, Row, Col } from "react-bootstrap";
 import http from "../lib/httpService";
 import MyNavbar from "../components/myNavbar";
 import styles from "../styles/index.module.css";
+import Head from "next/head";
 import { getEstablishments } from "../lib/establishmentsService";
 import EstCard from "../components/common/estCard";
 // import AppContext from "../context/AppContext";
@@ -24,22 +25,37 @@ export default function Home({ ests }) {
           <h5 className="playfair">One stop shop for project development</h5>
         </div>
       </div>
-      <Container>
-        <Row>
+      <Container fluid="md">
+        <Row className={`${styles.row} pt-3`}>
           {/* <Col className={styles.padCol}>Left Side</Col> */}
-          <Col md={6} lg={4} className={styles.col}>
-            <h5 className={`playfair ${styles.h5}`}>Crawlspaces</h5>
+          <Col className={`${styles.col} col-12 col-sm-6 col-lg-4 `}>
+            <img
+              src="/images/home-1-290.jpg"
+              alt="Crawlspaces"
+              className={styles.image}
+            />
+            <h5 className={`playfair ${styles.h5} mt-2`}>Crawlspaces</h5>
             <p>
               Here is some stuff about crawlspaces. Also some longer stuff about
               crawlspace
             </p>
           </Col>
-          <Col md={6} lg={4} className={styles.col}>
-            <h5 className={`playfair ${styles.h5}`}>Interiors</h5>
+          <Col className={`${styles.col} col-12 col-sm-6 col-lg-4`}>
+            <img
+              src="/images/home-2-290.jpg"
+              alt="Interiors"
+              className={styles.image}
+            />
+            <h5 className={`playfair ${styles.h5} mt-2`}>Interiors</h5>
             <p>Here is some stuff about interiors</p>
           </Col>
-          <Col md={6} lg={4} className={styles.col}>
-            <h5 className={`playfair ${styles.h5}`}>Exteriors</h5>
+          <Col className={`${styles.col} col-12 col-sm-6 col-lg-4`}>
+            <img
+              src="/images/home-3-290.jpg"
+              alt="Crawlspaces"
+              className={styles.image}
+            />
+            <h5 className={`playfair ${styles.h5} mt-2`}>Exteriors</h5>
             <p>Here is some stuff about exteriors</p>
           </Col>
           {/* <Col className={styles.padCol}>Right Side</Col> */}

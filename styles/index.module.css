@@ -10,23 +10,35 @@
 }
 .headerImage {
   text-align: center;
-  height: 300px;
   background-image: url("/bathroom.jpg"); /* The image used */
   background-color: #cccccc; /* Used if the image is unavailable */
-  height: 500px; /* You must set a specified height */
+  height: 400px; /* You must set a specified height */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
 .col {
-  height: 300px;
+  /* height: 300px; */
+  /* background-color: turquoise;
+  border-style: solid;
+  border-width: 2px; */
+  text-align: center;
+}
+.row {
+  /* background-color: teal; */
 }
 .padCol {
   height: 300px;
   background-color: yellow;
 }
 .h5 {
-  color: rgb(98, 188, 72);
+  color: rgb(51, 119, 33);
+}
+.image {
+  box-shadow: -7px 7px 5px grey;
+  /* border-style: solid;
+  border-color: gray;
+  border-width: 1px; */
 }
 /* .h3 {
   font-family: "Playfair Display", serif;

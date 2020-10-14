@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Head from "next/head";
 import _ from "lodash";
 import AppContext from "../context/AppContext";
+import Footer from "../pages/footer";
 import MyNavbar from "./myNavbar";
 
 // import { logout } from "../lib/auth";
@@ -9,6 +10,7 @@ import MyNavbar from "./myNavbar";
 
 export default function Layout(props) {
   const { user, setUser } = useContext(AppContext);
+
   return (
     <>
       <Head>
@@ -19,6 +21,7 @@ export default function Layout(props) {
           href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
           rel="stylesheet"
         ></link>
+
         <script
           src="https://kit.fontawesome.com/94a6e7c62b.js"
           crossOrigin="anonymous"
@@ -26,6 +29,7 @@ export default function Layout(props) {
       </Head>
 
       <div>{props.children}</div>
+      <Footer></Footer>
     </>
   );
 }

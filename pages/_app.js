@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import AppContext from "../context/AppContext";
 import { getJwt } from "../lib/auth";
 import { getMe } from "../lib/userService";
+import Head from "next/head";
 import _ from "lodash";
 import "../styles/customTheme.scss";
 import "../styles/globals.css";
@@ -61,6 +62,9 @@ function MyApp({ Component, pageProps }) {
         setUser: setThisUser,
       }}
     >
+      <Head>
+        <script type="text/javascript" src="/js/salesiq.js"></script>
+      </Head>
       <Layout>
         <Component {...pageProps} />
       </Layout>
