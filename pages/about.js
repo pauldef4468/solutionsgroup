@@ -96,7 +96,6 @@ function About() {
               </div>
             </Link>
           </Col>
-          {/* <Col className={styles.padCol}>Right Side</Col> */}
         </Row>
       </Container>
     </>
