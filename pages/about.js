@@ -92,7 +92,7 @@ function About() {
                   className={styles.image}
                 />
                 <h5 className={`playfair ${styles.h5} mt-2`}>Paul DeFalco</h5>
-                <p>Estimator/Project Manager</p>
+                <p>Estimator/Sales/Project Manager</p>
               </div>
             </Link>
           </Col>
