@@ -6,10 +6,11 @@ import MyNavbar from "../components/myNavbar";
 import styles from "../styles/index.module.css";
 import Head from "next/head";
 import { getEstablishments } from "../lib/establishmentsService";
+import { getHomeInfo } from "../lib/homeService";
 import EstCard from "../components/common/estCard";
 // import AppContext from "../context/AppContext";
 
-export default function Home({ ests }) {
+export default function Home(props) {
   return (
     <>
       <MyNavbar activeLink="home"></MyNavbar>
@@ -21,8 +22,8 @@ export default function Home({ ests }) {
       </Container> */}
       <div className={styles.headerImage}>
         <div className={styles.mainSearch}>
-          <h1 className="pt-5 playfair">The Solutions Group</h1>
-          <h5 className="playfair">One stop shop for project development</h5>
+          <h1 className="pt-5 playfair">{props.title}</h1>
+          <h5 className="playfair">{props.subTitle}</h5>
         </div>
       </div>
       <Container fluid="md">
@@ -78,15 +79,16 @@ export default function Home({ ests }) {
   );
 }
 export async function getStaticProps(context) {
-  let ests;
-  ests = [];
-  // try {
-  //   const response = await getEstablishments();
-  //   ests = response.data;
-  // } catch (e) {
-  //   console.error(e);
-  // }
+  let title = "";
+  let subTitle = "";
+  try {
+    const response = await getHomeInfo();
+    title = response.data.title;
+    subTitle = response.data.subTitle;
+  } catch (e) {
+    console.error(e);
+  }
   return {
-    props: { ests }, // will be passed to the page component as props
+    props: { title, subTitle }, // will be passed to the page component as props
   };
 }
